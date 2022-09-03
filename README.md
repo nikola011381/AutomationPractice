@@ -10,3 +10,5 @@ Instalacija Cypress okruženja.
 4. yarn install
 5. yarn dev
 6. yarn cypress:open
+
+U ovoj aplikaciji testiramo http://automationpractice.com/
