@@ -13,4 +13,4 @@ Instalacija Cypress okruženja.
 
 U ovoj aplikaciji testiramo http://automationpractice.com/ u okviru grane Automation-1.0
 
-Ovde se nalaze default fajlovi za cypress-realworld-app
+Ovde Main grani se nalaze default fajlovi za cypress-realworld-app
