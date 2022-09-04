@@ -10,8 +10,16 @@ declare namespace Cypress {
         /**
          * @example cy.clearFieldFocusOff()
          */
-         clearFieldFocusOff(email:any): Chainable<any>;
-
-         
+         clearFieldFocusOff(email:any): Chainable<any>;  
     }
+    interface Chainable<Subject = any> {
+        /**
+         * @example cy.clickOnSignInHomePage()
+         */
+         clickOnSignInHomePage(email:any): Chainable<any>;
+    }
+
+
+
+    
 }

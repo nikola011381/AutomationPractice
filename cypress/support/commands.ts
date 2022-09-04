@@ -366,6 +366,7 @@ Cypress.Commands.add("loginByGoogleApi", () => {
 });
 
 Cypress.Commands.add("emailRegister", (email) => {
+  //.header_user_info click on Sign In in navigation bar on home page 
   cy.get('.header_user_info').click() 
   cy.get('#email_create').type(email);
   cy.get('#SubmitCreate').click();
@@ -378,4 +379,7 @@ Cypress.Commands.add("clearFieldFocusOff", (focusonof) => {
  });
 
 
- 
+ Cypress.Commands.add("clickOnSignInHomePage", (focusonof) => {
+  cy.get('.header_user_info').click() 
+
+ });
