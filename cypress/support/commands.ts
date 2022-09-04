@@ -11,6 +11,7 @@ import "@percy/cypress";
 // Import commands for third-party auth providers
 import "./auth-provider-commands/auth0";
 import "./auth-provider-commands/okta";
+import { waitForDebugger } from "inspector";
 
 // custom command to make taking snapshots with full name
 // formed from the test title + suffix easier
@@ -368,6 +369,7 @@ Cypress.Commands.add("emailRegister", (email) => {
   cy.get('.header_user_info').click() 
   cy.get('#email_create').type(email);
   cy.get('#SubmitCreate').click();
+  cy.wait(6000)
 });
 
 Cypress.Commands.add("clearFieldFocusOff", (focusonof) => {

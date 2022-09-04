@@ -62,6 +62,15 @@ describe('Register user', function() {
 
     it.only('Check error if field is empty in mandatory fields',function()  {
         cy.clearFieldFocusOff("#customer_firstname")
+        cy.get('[class="required form-group form-error"]').children( "#customer_firstname").should('be.visible')
+        cy.clearFieldFocusOff("#customer_lastname")
+        cy.get('[class="required form-group form-error"]').children("#customer_lastname").should('be.visible')
+        cy.clearFieldFocusOff("#email")
+        cy.get('[class="required form-group form-error"]').children( "#email").should('be.visible')
+        cy.clearFieldFocusOff("#passwd") 
+        cy.get('[class="required password form-group form-error"]').children( "#passwd").should('be.visible')
+
+
 
     });
 
