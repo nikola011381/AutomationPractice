@@ -370,9 +370,10 @@ Cypress.Commands.add("emailRegister", (email) => {
   cy.get('#SubmitCreate').click();
 });
 
-Cypress.Commands.add("infoCreateAccount", () => {
-  cy.get('h1').should('have.text','Create an account')  
-});
+Cypress.Commands.add("clearFieldFocusOff", (focusonof) => {
+  cy.get(focusonof).clear();
+  cy.get(focusonof).focus().blur()
+ });
 
 
  

@@ -8,9 +8,9 @@ declare namespace Cypress {
 
     interface Chainable<Subject = any> {
         /**
-         * @example cy.infoCreateAccount(email)
+         * @example cy.clearFieldFocusOff()
          */
-         infoCreateAccount(email:any): Chainable<any>;
+         clearFieldFocusOff(email:any): Chainable<any>;
 
          
     }

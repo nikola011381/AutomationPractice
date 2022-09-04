@@ -32,13 +32,6 @@ describe('Register user', function() {
         'Country is invalid'
     ]
 
-
-
-
-
-
-
-
     beforeEach('Visit our application.', function () {
         cy.visit(ConsHomePage.envHomePage);    
         cy.emailRegister(ConsEmailUser1.envEmailUser1); 
@@ -50,7 +43,7 @@ describe('Register user', function() {
 
     });
     
-    it.only('Click on Sing-up while all fields are not populated', function() {
+    it('Click on Sing-up while all fields are not populated', function() {
         cy.get('#submitAccount').click() 
         cy.get('[class="alert alert-danger"]').should('be.visible')
         cy.get('[class="alert alert-danger"]').children('ol').children('li').then((item)     => {
@@ -67,7 +60,10 @@ describe('Register user', function() {
     )
     });
 
+    it.only('Check error if field is empty in mandatory fields',function()  {
+        cy.clearFieldFocusOff("#customer_firstname")
 
+    });
 
     
 }); 
