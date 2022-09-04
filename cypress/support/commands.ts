@@ -363,3 +363,8 @@ Cypress.Commands.add("loginByGoogleApi", () => {
     });
   });
 });
+
+Cypress.Commands.add("emailRegister", (email) => {
+  cy.get('#email_create').type(email);
+  cy.get('#SubmitCreate').click();
+});

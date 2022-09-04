@@ -23,7 +23,15 @@ module.exports = defineConfig({
     codeCoverage: {
       url: "http://localhost:3001/__coverage__",
       exclude: "cypress/**/*.*",
+
+    
     },
+    
+    "envUser1": {
+      "envEmailUser1": "nikolaradovic***@gmail.com",
+     },
+
+
     defaultPassword: process.env.SEED_DEFAULT_USER_PASSWORD,
     paginationPageSize: process.env.PAGINATION_PAGE_SIZE,
 
@@ -68,9 +76,11 @@ module.exports = defineConfig({
     supportFile: "cypress/support/e2e.ts",
     viewportHeight: 1000,
     viewportWidth: 1280,
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on, config) 
+    
+    {
       const testDataApiEndpoint = `${config.env.apiUrl}/testData`;
-
+   
       const queryDatabase = ({ entity, query }, callback) => {
         const fetchData = async (attrs) => {
           const { data } = await axios.get(`${testDataApiEndpoint}/${entity}`);
@@ -99,6 +109,12 @@ module.exports = defineConfig({
 
       codeCoverageTask(on, config);
       return config;
+
+ 
+    
+
+
     },
   },
 });
+
