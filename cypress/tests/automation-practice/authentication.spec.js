@@ -18,8 +18,7 @@ describe('Register user', function() {
         `The Zip/Postal code you've entered is invalid. It must follow this format: 00000`,
         'This country requires you to choose a State.'
     ]
-    const expected2 = [
-        
+    const expected2 = [  
         'You must register at least one phone number.',
         'lastname is required.',
         'firstname is required.',
