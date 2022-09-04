@@ -28,7 +28,11 @@ module.exports = defineConfig({
     },
     
     "envUser1": {
-      "envEmailUser1": "nikolaradovic***@gmail.com",
+      "envEmailUser1": "nikolaradoviccypresstest@gmail.com",
+     },
+
+     "envLinkovi": {
+      "envHomePage":"http://automationpractice.com/index.php",
      },
 
 

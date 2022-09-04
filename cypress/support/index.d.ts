@@ -3,7 +3,14 @@ declare namespace Cypress {
         /**
          * @example cy.emailRegister(email)
          */
-         emailRegister(email:any): Chainable<any>;
+         emailRegister(email:any): Chainable<any>; 
+    }
+
+    interface Chainable<Subject = any> {
+        /**
+         * @example cy.infoCreateAccount(email)
+         */
+         infoCreateAccount(email:any): Chainable<any>;
 
          
     }
