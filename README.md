@@ -11,6 +11,6 @@ Instalacija Cypress okruženja.
 5. yarn dev
 6. yarn cypress:open
 
-U ovoj aplikaciji testiramo http://automationpractice.com/
+U ovoj aplikaciji testiramo http://automationpractice.com/ u okviru grane Automation-1.0
 
 Ovde se nalaze default fajlovi za cypress-realworld-app
