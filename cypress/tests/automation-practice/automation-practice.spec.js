@@ -80,14 +80,16 @@ describe('Register user', function() {
     });
 
 
-    it.only('TEST CASE 4 Navigate to CREATE AN ACCOUNT page', function() {
+    it ('TEST CASE 4 Navigate to CREATE AN ACCOUNT page', function() {
         cy.emailRegister(ConsEmailUser1.envEmailUser1); 
         cy.get('h1').should('have.text','Create an account')  
         cy.get('[data-validate="isEmail"]').should('have.value',ConsEmailUser1.envEmailUser1)
 
     });
     
-    it('Click on Sing-up while all fields are not populated', function() {
+    it.only('TEST CASE 5 CREATE AN ACCOUNT  Click on Sing-up while all fields are not populated', function() {
+        cy.emailRegister(ConsEmailUser1.envEmailUser1); 
+
         cy.get('#submitAccount').click() 
         cy.get('[class="alert alert-danger"]').should('be.visible')
         cy.get('[class="alert alert-danger"]').children('ol').children('li').then((item)     => {
