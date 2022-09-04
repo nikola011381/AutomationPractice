@@ -3,7 +3,7 @@
 //import { filter } from '../../fixtures/const-sign-in'
 
 const ConsEmailUser1 = Cypress.env("envUser1")
-const ConsHomePage = Cypress.env("envLinkovi")
+//const ConsHomePage = Cypress.env("envLinkovi")
 
 
 describe('Register user', function() {
@@ -32,7 +32,7 @@ describe('Register user', function() {
     ]
 
     beforeEach('Visit our application.', function () {
-        cy.visit(ConsHomePage.envHomePage);    
+        cy.openHomePage();
         cy.emailRegister(ConsEmailUser1.envEmailUser1); 
 
 

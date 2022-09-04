@@ -379,7 +379,12 @@ Cypress.Commands.add("clearFieldFocusOff", (focusonof) => {
  });
 
 
- Cypress.Commands.add("clickOnSignInHomePage", (focusonof) => {
+ Cypress.Commands.add("clickOnSignInHomePage", () => {
   cy.get('.header_user_info').click() 
+
+ });
+
+ Cypress.Commands.add("openHomePage", ()=> {
+  cy.visit('http://automationpractice.com/index.php') 
 
  });

@@ -18,7 +18,12 @@ declare namespace Cypress {
          */
          clickOnSignInHomePage(email:any): Chainable<any>;
     }
-
+    interface Chainable<Subject = any> {
+        /**
+         * @example cy.openHomePage()
+         */
+         openHomePage(email:any): Chainable<any>;
+    }
 
 
     
