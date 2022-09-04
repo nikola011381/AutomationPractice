@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-import { filter } from '../../fixtures/const-sign-in'
-
+// import { filter } from '../../fixtures/const-sign-in'
+ 
 const ConsEmailUser1 = Cypress.env("envUser1")
 const ConsHomePage = Cypress.env("envLinkovi")
 
