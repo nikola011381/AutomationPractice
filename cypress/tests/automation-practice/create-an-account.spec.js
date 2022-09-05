@@ -63,7 +63,7 @@ describe('Register user', function() {
     )
     });
 
-    it('Check error if field is empty in mandatory fields',function()  {
+    it('TEST CASE 6 CREATE AN ACCOUNT  Check error if field is empty in mandatory fields',function()  {
         cy.clearFieldFocusOff("#customer_firstname")
         cy.get('[class="required form-group form-error"]').children( "#customer_firstname").should('be.visible')
         cy.clearFieldFocusOff("#customer_lastname")
